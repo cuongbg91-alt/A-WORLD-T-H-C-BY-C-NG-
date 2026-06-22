@@ -1,0 +1,8 @@
+{
+  "name": "Remix: WORD TỰ HỌC BY CƯỜNG",
+  "description": "Công cụ rà soát và sửa lỗi văn bản hành chính/Đảng theo quy định (Nghị định 30, Hướng dẫn 36) với khả năng tự học.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

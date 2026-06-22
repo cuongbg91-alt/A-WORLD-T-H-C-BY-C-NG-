@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script>
+      (function() {
+        // Danh sách các từ khóa cần ẩn để tránh làm nhiễu tiến trình lướt duyệt
+        const suppressTerms = [
+          "websocket", "hmr", "[vite]", "failed to connect", "connected",
+          "build", "render start", "render end", "debug", "connecting...",
+          "closed without opened", "socket", "unhandled rejection", "hot module"
+        ];
+        function shouldSuppress(msg) {
+          if (!msg) return false;
+          const lower = String(msg).toLowerCase();
+          return suppressTerms.some(term => lower.includes(term));
+        }
+
+        // Bắt lỗi không đồng bộ từ API WebSocket của Vite hoặc hệ thống liên quan
+        window.addEventListener("unhandledrejection", function(e) {
+          const reason = e.reason ? (e.reason.message || e.reason) : "";
+          if (shouldSuppress(reason)) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }, true);
+
+        // Bắt lỗi tiêu chuẩn đồng bộ từ client
+        window.addEventListener("error", function(e) {
+          const msg = e.message || "";
+          if (shouldSuppress(msg)) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }, true);
+
+        // Đè các phương thức console ngay từ ban đầu
+        const methods = ["log", "info", "warn", "error", "debug"];
+        methods.forEach(method => {
+          const original = console[method];
+          if (original) {
+            console[method] = function(...args) {
+              const fullMsg = args.map(arg => {
+                try {
+                  return typeof arg === "object" ? JSON.stringify(arg) : String(arg);
+                } catch (_) {
+                  return String(arg);
+                }
+              }).join(" ");
+              if (shouldSuppress(fullMsg)) {
+                return;
+              }
+              original.apply(console, args);
+            };
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

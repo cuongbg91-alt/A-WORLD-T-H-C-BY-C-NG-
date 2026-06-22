@@ -1,0 +1,46 @@
+{
+  "learnedRules": [
+    {
+      "id": "rule-nd30-quochieu",
+      "category": "Định dạng",
+      "source": "Nghị định 30/2020/NĐ-CP",
+      "content": "Quốc hiệu 'CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM' viết in hoa đứng, đậm. Tiêu ngữ 'Độc lập - Tự do - Hạnh phúc' viết chữ đứng, đậm, có các gạch nối giữa cụm từ và có gạch chân nét liền dài bằng độ dài tiêu ngữ.",
+      "createdAt": "2026-05-27T10:00:00.000Z"
+    },
+    {
+      "id": "rule-nd30-font",
+      "category": "Định dạng",
+      "source": "Nghị định 30/2020/NĐ-CP",
+      "content": "Phông chữ chuẩn cho toàn bộ văn bản hành chính là 'Times New Roman' Unicode bộ mã dựng sẵn. Cỡ chữ trình bày nội dung từ cỡ 13pt đến 14pt đứng.",
+      "createdAt": "2026-05-27T10:01:00.000Z"
+    },
+    {
+      "id": "rule-nd30-margin",
+      "category": "Định dạng",
+      "source": "Nghị định 30/2020/NĐ-CP",
+      "content": "Căn lề trang A4 chuẩn: lề trái từ 3.0cm đến 3.5cm, lề phải từ 1.5cm đến 2.0cm, lề trên và lề dưới từ 2.0cm đến 2.5cm.",
+      "createdAt": "2026-05-27T10:02:00.000Z"
+    },
+    {
+      "id": "rule-nd30-spacing",
+      "category": "Văn phong",
+      "source": "Nghị định 30/2020/NĐ-CP",
+      "content": "Thụt lề đoạn văn mặc định cho toàn bộ phần văn bản hành chính là 1.0cm đến 1.25cm. Giãn dòng từ 1.15 đến 1.5. Căn lề đều cả hai bên (Justify).",
+      "createdAt": "2026-05-27T10:03:00.000Z"
+    },
+    {
+      "id": "rule-hd05-dang",
+      "category": "Logic",
+      "source": "Hướng dẫn 05-HD/VPTW, ngày 27/5/2026",
+      "content": "Tiêu đề các cơ quan Đảng dòng trên cùng ghi tên cấp bộ Đảng chủ quản (ví dụ: ĐẢNG BỘ TỈNH ĐIỆN BIÊN), dòng dưới ghi tên cơ quan ra văn bản (HỘI ĐỒNG NHÂN DÂN/BAN CHẤP HÀNH...), căn lề đứng không thụt đầu dòng, tuân định Hướng dẫn số 05-HD/VPTW mới nhất.",
+      "createdAt": "2026-05-27T10:04:00.000Z"
+    },
+    {
+      "id": "rule-nd150-digital",
+      "category": "Lý luận",
+      "source": "Nghị định 150/2025/NĐ-CP",
+      "content": "Chữ ký số cơ quan hành chính điện tử là hình ảnh con dấu đỏ và chữ ký tay màu xanh trên nền trong suốt (PNG), đặt phía trên lề phải, căn chỉnh không lệch dòng, đại diện ủy quyền pháp lý.",
+      "createdAt": "2026-05-27T10:05:00.000Z"
+    }
+  ]
+}
